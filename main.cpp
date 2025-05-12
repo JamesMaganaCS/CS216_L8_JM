@@ -248,48 +248,48 @@ ostream& operator<<(ostream& os, const Fraction& fraction) {
 }
 
 void testEqualityOperator() {
-    Fraction f1(1, 2);
-    Fraction f2(2, 4);
-    Fraction f3(3, 4);
+    Fraction fraction1(1, 2);
+    Fraction fraction2(2, 4);
+    Fraction fraction3(3, 4);
     
     cout << "--- Testing == operator ---\n" 
-         << f1 << " == " << f2 << " : " << (f1 == f2 ? "true" : "false") << endl
-         << f1 << " == " << f3 << " : " << (f1 == f3 ? "true" : "false") << endl;
+         << fraction1 << " == " << fraction2 << " : " << (fraction1 == fraction2 ? "true" : "false") << endl
+         << fraction1 << " == " << fraction3 << " : " << (fraction1 == fraction3 ? "true" : "false") << endl;
 }
 
 void testAssignmentOperator() {
-    Fraction f1(1, 2);
-    Fraction f4(3, 4); 
+    Fraction fraction1(1, 2);
+    Fraction fraction4(3, 4); 
     
     cout << "\n--- Testing = operator ---\n"
          << "Before assignment:\n"
-         << "f1: " << f1 << "\n"
-         << "f4: " << f4 << "\n";
+         << "fraction1: " << fraction1 << "\n"
+         << "fraction4: " << fraction4 << "\n";
     
-    f4 = f1; 
+    fraction4 = fraction1; 
     
-    cout << "After f1 = f4 assignment:\n"
-         << "f1: " << f1 << "\n"
-         << "f4: " << f4 << "\n";
+    cout << "After fraction1 = fraction4 assignment:\n"
+         << "fraction1: " << fraction1 << "\n"
+         << "fraction4: " << fraction4 << "\n";
 }
 
 void testOutputOperator() {
-    Fraction f6(1, 1);
-    Fraction f7(4, 2);
-    Fraction f8(3);
+    Fraction fraction6(1, 1);
+    Fraction fraction7(4, 2);
+    Fraction fraction8(3);
     
     cout << "\n--- Testing << operator ---\n"
-         << "f6 (" << f6.getNumerator() << "/" << f6.getDenominator() << "): " << f6 << endl
-         << "f7 (" << f7.getNumerator() << "/" << f7.getDenominator() << "): " << f7 << endl
-         << "f8 (" << f8.getNumerator() << "/" << f8.getDenominator() << "): " << f8 << endl;
+         << "fraction6 (" << fraction6.getNumerator() << "/" << fraction6.getDenominator() << "): " << fraction6 << endl
+         << "fraction7 (" << fraction7.getNumerator() << "/" << fraction7.getDenominator() << "): " << fraction7 << endl
+         << "fraction8 (" << fraction8.getNumerator() << "/" << fraction8.getDenominator() << "): " << fraction8 << endl;
 }
 
 void testInputOperator() {
-    Fraction f5;
-    f5.setFraction(4, 5);
+    Fraction fraction5;
+    fraction5.setFraction(4, 5);
     
     cout << "\n--- Testing >> operator (simulated with hardcoded values) ---\n"
-         << "f5 (" << f5.getNumerator() << "/" << f5.getDenominator() << "): " << f5 << '\n';
+         << "fraction5 (" << fraction5.getNumerator() << "/" << fraction5.getDenominator() << "): " << fraction5 << '\n';
 }
 
 void demonstrateOperators() {
@@ -386,11 +386,11 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 1/2
-f4: 3/4
-After f1 = f4 assignment:
-f1: 1/2
-f4: 1/2
+fraction1: 1/2
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 1/2
+fraction4: 1/2
 
 Current Fraction objects in memory: 0
 
@@ -410,11 +410,11 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 4/6
-f4: 3/4
-After f1 = f4 assignment:
-f1: 4/6
-f4: 4/6
+fraction1: 4/6
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 4/6
+fraction4: 4/6
 
 Current Fraction objects in memory: 0
 
@@ -435,16 +435,16 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 1/2
-f4: 3/4
-After f1 = f4 assignment:
-f1: 1/2
-f4: 1/2
+fraction1: 1/2
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 1/2
+fraction4: 1/2
 
 --- Testing << operator ---
-f6 (5/2): 2 1/2
-f7 (3/8): 3/8
-f8 (5/1): 5
+fraction6 (5/2): 2 1/2
+fraction7 (3/8): 3/8
+fraction8 (5/1): 5
 
 Current Fraction objects in memory: 0
 
@@ -464,16 +464,16 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 1/2
-f4: 3/4
-After f1 = f4 assignment:
-f1: 1/2
-f4: 1/2
+fraction1: 1/2
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 1/2
+fraction4: 1/2
 
 --- Testing << operator ---
-f6 (7/2): 3 1/2
-f7 (5/8): 5/8
-f8 (4/1): 4
+fraction6 (7/2): 3 1/2
+fraction7 (5/8): 5/8
+fraction8 (4/1): 4
 
 Current Fraction objects in memory: 0
 
@@ -493,16 +493,16 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 1/2
-f4: 3/4
-After f1 = f4 assignment:
-f1: 1/2
-f4: 1/2
+fraction1: 1/2
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 1/2
+fraction4: 1/2
 
 --- Testing << operator ---
-f6 (1/1): 1
-f7 (4/2): 2
-f8 (3/1): 3
+fraction6 (1/1): 1
+fraction7 (4/2): 2
+fraction8 (3/1): 3
 
 Current Fraction objects in memory: 0
 
@@ -523,19 +523,19 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 1/2
-f4: 3/4
-After f1 = f4 assignment:
-f1: 1/2
-f4: 1/2
+fraction1: 1/2
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 1/2
+fraction4: 1/2
 
 --- Testing << operator ---
-f6 (1/1): 1
-f7 (4/2): 2
-f8 (3/1): 3
+fraction6 (1/1): 1
+fraction7 (4/2): 2
+fraction8 (3/1): 3
 
 --- Testing >> operator (simulated with hardcoded values) ---
-f5 (3/4): 3/4
+fraction5 (3/4): 3/4
 
 Current Fraction objects in memory: 0
 
@@ -555,19 +555,19 @@ Enter your choice: 1
 
 --- Testing = operator ---
 Before assignment:
-f1: 1/2
-f4: 3/4
-After f1 = f4 assignment:
-f1: 1/2
-f4: 1/2
+fraction1: 1/2
+fraction4: 3/4
+After fraction1 = fraction4 assignment:
+fraction1: 1/2
+fraction4: 1/2
 
 --- Testing << operator ---
-f6 (1/1): 1
-f7 (4/2): 2
-f8 (3/1): 3
+fraction6 (1/1): 1
+fraction7 (4/2): 2
+fraction8 (3/1): 3
 
 --- Testing >> operator (simulated with hardcoded values) ---
-f5 (4/5): 4/5
+fraction5 (4/5): 4/5
 
 Current Fraction objects in memory: 0
 
